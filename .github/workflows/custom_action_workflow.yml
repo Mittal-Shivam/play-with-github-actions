@@ -11,5 +11,7 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Install Dependency
+              run: npm install @actions/core moment
             - name: Run custom action
               uses: Mittal-Shivam/custom-actions@main
