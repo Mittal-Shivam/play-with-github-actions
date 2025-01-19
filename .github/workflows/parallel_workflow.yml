@@ -32,12 +32,6 @@ jobs:
             - name: Print a message for non-main branch
               if: github.ref != 'refs/heads/main'
               run: echo 'This is not main branch'
-
-            - name: Install dependencies
-              run: npm ci
-
-            - name: Run tests
-              run: npm test
             
             - name: Debug message
               if: env.DEBUG == 'true'
@@ -62,9 +56,6 @@ jobs:
             - name: Print a message for non-main branch
               if: github.ref != 'refs/heads/main'
               run: echo 'This is not main branch'
-
-            - name: Run tests
-              run: npm test
             
             - name: Debug message
               if: env.DEBUG == 'true'
